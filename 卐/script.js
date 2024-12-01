@@ -1,23 +1,3 @@
-const draggable = document.getElementById("draggable");
-let offsetX, offsetY;
-
-draggable.onmousedown = function(e) {
-    offsetX = e.clientX - draggable.getBoundingClientRect().left;
-    offsetY = e.clientY - draggable.getBoundingClientRect().top;
-    document.onmousemove = moveElement;
-    document.onmouseup = stopDragging;
-};
-
-function moveElement(e) {
-    draggable.style.left = (e.clientX - offsetX) + "px";
-    draggable.style.top = (e.clientY - offsetY) + "px";
-}
-
-function stopDragging() {
-    document.onmousemove = null;
-    document.onmouseup = null;
-}
-
 const taskbar = document.createElement('div');
 taskbar.style.cssText = 'position:fixed;bottom:0;left:0;width:100%;height:40px;background:linear-gradient(to bottom, #000080, #00004d);box-shadow:0 -2px 5px rgba(0, 0, 0, 0.5);display:flex;align-items:center;';
 const startButton = document.createElement('div');
@@ -37,7 +17,7 @@ taskbar.appendChild(clock);
 setInterval(() => {
     clock.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }, 1000);
-const audio = new Audio('https://traphouse.cfd/Hate%20Me.mp3');
+const audio = new Audio('https://cdn.zaza.rest/music.mp3');
 audio.play();
 playing = 1
 volumeIcon.addEventListener('click', () => {
