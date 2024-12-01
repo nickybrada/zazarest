@@ -1,32 +1,3 @@
-dragElement(document.querySelector(".window"));
-
-function dragElement(el) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    el.querySelector("#title").onmousedown = dragMouseDown;
-
-    function dragMouseDown(e) {
-        e = e || window.event;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e = e || window.event;
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        el.style.top = (el.offsetTop - pos2) + "px";
-        el.style.left = (el.offsetLeft - pos1) + "px";
-    }
-
-    function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-}
 const taskbar = document.createElement('div');
 taskbar.style.cssText = 'position:fixed;bottom:0;left:0;width:100%;height:40px;background:linear-gradient(to bottom, #000080, #00004d);box-shadow:0 -2px 5px rgba(0, 0, 0, 0.5);display:flex;align-items:center;';
 const startButton = document.createElement('div');
