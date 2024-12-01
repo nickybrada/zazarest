@@ -5,9 +5,12 @@
     <link rel="stylesheet" href="https://unpkg.com/xp.css/dist/98.css">
     <style>
         body {
-            background-color: black; /* Start with a black background */
-            transition: background-color 2s; /* Smooth transition */
-            overflow: hidden; /* Prevent scrolling */
+            background-image: url('https://cdn.zaza.rest/wallpaper.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 2s;
+            overflow: hidden;
         }
         #draggableWindow {
             left: 50%;
@@ -39,10 +42,17 @@
         let offsetX, offsetY;
         startupSound.play();
         startupSound.onplay = () => {
-            setTimeout(() => {
-                document.body.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-            }, startupSound.duration * 1000);
+            document.body.style.opacity = '1';
         };
+        let brightness = 0;
+        const interval = setInterval(() => {
+            if (brightness < 1) {
+                brightness += 0.01; 
+                document.body.style.filter = `brightness(${1 + brightness})`;
+            } else {
+                clearInterval(interval);
+            }
+        }, (startupSound.duration * 1000) / 100);
         draggableWindow.querySelector('.title-bar').addEventListener('mousedown', (e) => {
             isDragging = true;
             offsetX = e.clientX - draggableWindow.getBoundingClientRect().left;
