@@ -29,6 +29,118 @@
         <div class="window-body">
             <p>There's so much room for activities!</p>
         </div>
+    <div id="toolbar">
+        <div class="toolbar-start-menu">
+          <button class="start-button">
+            Start
+          </button>
+        
+        </div>
+        <div class="toolbar-separator"></div>
+        
+        <div class="toolbar-left">
+          <button class="toolbar-icon ie" onclick="showPopup('PopUpNovember')"></button>
+          <div class="window draggable ui-draggable ui-draggable-handle" id="PopUpNovember" style="margin: 32px; width: 250px; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="title-bar">
+              <div class="title-bar-text">November</div>
+              <div class="title-bar-controls">
+                <button class="NovemberClose" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body">
+              <center>
+                <img src="/web/20230413054840im_/https://valhal.la/Members/november.png" height="48px" width="48px">
+                <p>Came from the depths of hell (France)<br>
+                   Got arrested in 2015 for BGP Hijacking Wardawg and is now in maximum security<br>
+                   Smokes on Conreppin</p>
+                <section class="field-row" style="justify-content: center">
+                  <button class="NovemberOK" aria-label="OK" style="margin-top:10px;">OK</button>
+                </section>
+              </center>
+            </div>
+          </div>
+        
+          <button class="toolbar-icon outlook" onclick="showPopup('PopUpTori')"></button>
+          <div class="window draggable ui-draggable ui-draggable-handle" id="PopUpTori" style="margin: 32px; width: 250px; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="title-bar">
+              <div class="title-bar-text">Tori</div>
+              <div class="title-bar-controls">
+                <button class="ToriClose" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body">
+              <center>
+                <img src="/web/20230413054840im_/https://valhal.la/Members/tori.png" height="48px" width="48px">
+                <p>Cute submissive femboy from Albania<br>
+                  Got raided by the GCHQ and is now under 24/7 surveillance<br>
+                  Programs in HolyC</p>
+                <section class="field-row" style="justify-content: center">
+                  <button class="ToriOK" aria-label="OK" style="margin-top:10px;">OK</button>
+                </section>
+              </center>
+            </div>
+          </div>
+  
+          <button class="toolbar-icon desktop" onclick="showPopup('PopUpRemi')"></button>
+          <div class="window draggable ui-draggable ui-draggable-handle" id="PopUpRemi" style="margin: 32px; width: 250px; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="title-bar">
+              <div class="title-bar-text">Remi</div>
+              <div class="title-bar-controls">
+                <button class="RemiClose" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body">
+              <center>
+                <img src="/web/20230413054840im_/https://valhal.la/Members/remi.png" height="48px" width="48px">
+              <p>17 year old handsome wannabe hacker chinese APT group member<br>
+                funded by the north korean govt<br>
+                on the run for releasing KMS from the psych ward</p>
+                <section class="field-row" style="justify-content: center">
+                  <button class="RemiOK" aria-label="OK" style="margin-top:10px;">OK</button>
+                </section>
+              </center>
+            </div>
+          </div>
+        </div>
+
+
+        <audio id="audio" preload="none" tabindex="0" src="https://traphouse.cfd/Hate%20Me.mp3">
+        </audio>
+        
+        <div class="window volume" id="volume" style="position: fixed; width: 200px; display: none;">
+          <div class="title-bar">
+            <div class="title-bar-text">Volume</div>
+          </div>
+          <div class="status-bar">
+            <p id="backward" class="status-bar-field fa-solid fa-backward"></p>
+            <p id="pause" class="status-bar-field fa-solid fa-pause"></p>
+            <p id="forward" class="status-bar-field fa-solid fa-forward"></p>
+          </div>
+
+        </div>
+    
+        
+        
+
+        <div class="toolbar-separator"></div>
+        <div class="toolbar-right field-row" style="width: 106px;">
+          <img src="/web/20230413054840im_/https://valhal.la/images/sound.png" onclick="togglePopup('volume')" height="24" width="">
+
+          <div class="time">8:48 AM</div>       
+           
+        </div>
+                  <!--
+
+        <div class="toolbar-right">
+
+          <div class="field-row" style="width: 250px; height: 25px;">
+            <label for="range26">Vol:</label>
+            <input id="range26" type="range" min="0" max="50" value="50" />
+          </div>
+        </div>
+                  -->
+
+      </div>
     </div>
 
     <script>
