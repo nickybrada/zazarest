@@ -17,6 +17,7 @@
     </style>
 </head>
 <body>
+    <audio id="audio" preload="auto"></audio>
     <div class="window" id="draggableWindow" style="width: 300px; position: absolute; cursor: move;">
         <div class="title-bar">
             <div class="title-bar-text">zaza.rest</div>
@@ -37,7 +38,9 @@
     </div>
 
     <script>
-        new audio('https://cdn.zaza.rest/good.mp3').play();
+        const audio = document.getElementById('audio');
+        audio.src = 'https://cdn.zaza.rest/good.mp3';
+        audio.play();
         const draggableWindow = document.getElementById('draggableWindow');
         let isDragging = false;
         let offsetX, offsetY;
